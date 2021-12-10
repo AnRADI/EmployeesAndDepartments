@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TeacherController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,7 +14,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// ---------- teachers -------
+
 Route::get('/', function () {
 
-    return view('welcome');
+    return redirect()->route('teachers.index');
 });
+
+
+$methods = ['index', 'edit', 'update', 'create', 'store',];
+
+Route::resource('teachers', TeacherController::class)
+	->only($methods)
+	->names('teachers');

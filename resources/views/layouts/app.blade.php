@@ -15,28 +15,24 @@
 
     <!-- Styles -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
-</head>
-<body>
-    <div id="app">
-        <nav class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="{{ route('index') }}">Интернет Магазин</a>
-                </div>
-                <div id="navbar" class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav">
-                        <li ><a href="{{ route('index') }}">Все товары</a></li>
-                        <li  class="active" ><a href="{{ route('categories') }}">Категории</a>
-                        </li>
-                        <li ><a href="{{ route('cart') }}">В корзину</a></li>
-                        <li><a href="http://internet-shop.tmweb.ru/reset">Сбросить проект в начальное состояние</a></li>
-                    </ul>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="http://internet-shop.tmweb.ru/admin/home">Панель администратора</a></li>
-                    </ul>
-                </div>
-            </div>
+</head>
+<body class="app-layout">
+    <div id="app">
+        <nav class="container pt-4">
+            <ul class="main-nav">
+                <li>
+                    <a href="{{ route('teachers.index') }}" class="ml-4 text-muted">
+                        Teachers
+                    </a>
+                </li>
+{{--                <li>--}}
+{{--                    <a :href="route('categories')" class="ml-4 text-muted">--}}
+{{--                        Категории--}}
+{{--                    </a>--}}
+{{--                </li>--}}
+            </ul>
         </nav>
 
         <main class="py-4">
