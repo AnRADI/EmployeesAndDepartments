@@ -16,6 +16,7 @@
     <!-- Styles -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 
 </head>
 <body class="app-layout">
@@ -23,8 +24,8 @@
         <nav class="container pt-4">
             <ul class="main-nav">
                 <li>
-                    <a href="{{ route('teachers.index') }}" class="ml-4 text-muted">
-                        Teachers
+                    <a href="{{ route('teachers.index') }}" class="teacher-link ml-4 text-muted">
+                        Преподаватели
                     </a>
                 </li>
 {{--                <li>--}}

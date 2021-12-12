@@ -1,14 +1,38 @@
 
-@import "reset";
+// ------ Include modules(npm, includes) -------
 
+@import "includes/reset";
 @import '~bootstrap/scss/bootstrap';
 
-@import "teachers";
+
+// ------ Include modules(pages) -------
+
+@import "pages/teachers/index";
+@import "pages/teachers/create";
+@import "pages/teachers/edit";
+
+// ------ App scss -------
 
 .app-layout {
+
+
+	// ------ Main nav -------
 
 	.main-nav {
 		display: flex;
 		justify-content: flex-end;
+	}
+
+	.teacher-link {
+		font-weight: 600;
+	}
+
+
+	// ------ Errors validation -------
+
+	.errors {
+		margin-top: .25rem;
+		font-size: .875em;
+		color: #dc3545;
 	}
 }

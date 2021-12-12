@@ -22,7 +22,7 @@ Route::get('/', function () {
 });
 
 
-$methods = ['index', 'edit', 'update', 'create', 'store',];
+$methods = ['index', 'edit', 'update', 'create', 'store', 'destroy'];
 
 Route::resource('teachers', TeacherController::class)
 	->only($methods)

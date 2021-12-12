@@ -15,7 +15,9 @@ class CreateDisciplineTeacherTable extends Migration
     {
         Schema::create('discipline_teacher', function (Blueprint $table) {
 
-			$table->foreignId('teacher_id')->constrained();
+			$table->foreignId('teacher_id')
+				->constrained()
+				->onDelete('cascade');
 			$table->foreignId('discipline_id')->constrained();
         });
     }
