@@ -166,10 +166,9 @@ class TeacherController extends Controller
 
     public function destroy($id)
     {
-//		$deleteTeacher = $this->teacher
-//			->find($id);
+
 		Teacher::destroy($id);
 
-		return back();
+		return redirect()->route('teachers.index');
     }
 }

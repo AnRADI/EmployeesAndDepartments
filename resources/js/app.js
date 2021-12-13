@@ -7,6 +7,8 @@ window.$ = window.jQuery = require('jquery');
 require('bootstrap');
 
 require('./includes/select2.min');
+// require('./includes/moment.min');
+// require('./includes/daterangepicker.min');
 
 window.axios = require('axios');
 

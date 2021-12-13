@@ -11,6 +11,7 @@
     <title> HPI - @yield('title') </title>
 
     <!-- Scripts -->
+
     <script src="{{ mix('js/app.js') }}" defer></script>
 
     <!-- Styles -->
@@ -26,6 +27,11 @@
                 <li>
                     <a href="{{ route('teachers.index') }}" class="teacher-link ml-4 text-muted">
                         Преподаватели
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('disciplines.index') }}" class="teacher-link ml-4 text-muted">
+                        Дисциплины
                     </a>
                 </li>
 {{--                <li>--}}

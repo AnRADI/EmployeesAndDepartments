@@ -18,7 +18,9 @@ class CreateDisciplineTeacherTable extends Migration
 			$table->foreignId('teacher_id')
 				->constrained()
 				->onDelete('cascade');
-			$table->foreignId('discipline_id')->constrained();
+			$table->foreignId('discipline_id')
+				->constrained()
+				->onDelete('cascade');
         });
     }
 

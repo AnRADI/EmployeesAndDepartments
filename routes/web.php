@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TeacherController;
+use App\Http\Controllers\DisciplineController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +15,7 @@ use App\Http\Controllers\TeacherController;
 |
 */
 
-// ---------- teachers -------
+// ---------- Teachers -------
 
 Route::get('/', function () {
 
@@ -27,3 +28,12 @@ $methods = ['index', 'edit', 'update', 'create', 'store', 'destroy'];
 Route::resource('teachers', TeacherController::class)
 	->only($methods)
 	->names('teachers');
+
+
+// ---------- Disciplines -------
+
+$methods = ['index', 'edit', 'update', 'create', 'store', 'destroy'];
+
+Route::resource('disciplines', DisciplineController::class)
+	->only($methods)
+	->names('disciplines');

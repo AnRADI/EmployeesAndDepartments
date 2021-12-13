@@ -58,4 +58,60 @@ class Discipline extends Model
 
 		return $allDisciplinesId;
 	}
+
+
+	// ---------- Discipline Controller -----------
+
+	public function paginateDisciplinesDI() {
+
+		$columns = [
+			'id',
+			'name',
+			'start_date',
+			'end_date',
+		];
+
+		$disciplines = $this
+			->select($columns)
+			->paginate(4);
+
+
+		return $disciplines;
+	}
+
+
+	public function firstDisciplineDE($id) {
+
+		$columns = [
+			'id',
+			'name',
+			'start_date',
+			'end_date',
+		];
+
+		$discipline = $this
+			->select($columns)
+			->where('id', $id)
+			->first();
+
+		return $discipline;
+	}
+
+
+	public function firstDisciplineDU($id) {
+
+		$columns = [
+			'id',
+			'name',
+			'start_date',
+			'end_date',
+		];
+
+		$discipline = $this
+			->select($columns)
+			->where('id', $id)
+			->first();
+
+		return $discipline;
+	}
 }
