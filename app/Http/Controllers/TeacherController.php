@@ -18,10 +18,13 @@ class TeacherController extends Controller
 	}
 
 
+
     public function index()
     {
     	$teachers = $this->teacher
 			->paginateTeachersDisciplinesTI();
+
+//    	$teacher = $this->teacher->where('id', 7)->with('disciplines:id,name')->first();
 
 
         return view('pages.teachers.index', compact('teachers'));
