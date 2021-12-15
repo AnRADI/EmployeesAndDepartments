@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\TeacherController;
-use App\Http\Controllers\DisciplineController;
+use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\DepartmentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,25 +15,19 @@ use App\Http\Controllers\DisciplineController;
 |
 */
 
-// ---------- Teachers -------
+// ---------- Employees -------
 
 Route::get('/', function () {
 
-    return redirect()->route('teachers.index');
+    return redirect()->route('employees');
 });
 
 
-$methods = ['index', 'edit', 'update', 'create', 'store', 'destroy'];
-
-Route::resource('teachers', TeacherController::class)
-	->only($methods)
-	->names('teachers');
+Route::get('/employees', [EmployeeController::class, 'employees'])
+	->name('employees');
 
 
-// ---------- Disciplines -------
+// ---------- Department -------
 
-$methods = ['index', 'edit', 'update', 'create', 'store', 'destroy'];
-
-Route::resource('disciplines', DisciplineController::class)
-	->only($methods)
-	->names('disciplines');
+Route::get('/employees/{department}', [DepartmentController::class, 'employeesDepartment'])
+	->name('employees.department');

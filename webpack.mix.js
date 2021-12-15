@@ -21,8 +21,8 @@ mix.js('resources/js/app.js', 'public/js')
     .sourceMaps(!production, 'source-map')
     .disableNotifications()
     .browserSync({
-        proxy: 'crm-hpi',
-        host: 'crm-hpi',
+        proxy: 'employees-departments',
+        host: 'employees-departments',
         notify: false,
         open: 'external'
     });

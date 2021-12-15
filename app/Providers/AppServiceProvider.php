@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use App\Models\Department;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -23,6 +24,15 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+    	$department = new Department();
+
+		$departments = $department
+			->getDepartmentsE();
+
+		//view()->share('departments', $departments);
+		view()->composer('layouts.app', function ($view) use($departments) {
+
+			$view->with('departments', $departments);
+		});
     }
 }

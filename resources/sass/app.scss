@@ -7,12 +7,9 @@
 
 // ------ Include modules(pages) -------
 
-@import "pages/teachers/index";
-@import "pages/teachers/create";
-@import "pages/teachers/edit";
-@import "pages/disciplines/index";
-@import "pages/disciplines/create";
-@import "pages/disciplines/edit";
+@import "pages/employees";
+@import "pages/department";
+
 
 // ------ App scss -------
 
@@ -26,7 +23,7 @@
 		justify-content: flex-end;
 	}
 
-	.teacher-link {
+	.employee-link {
 		font-weight: 600;
 	}
 

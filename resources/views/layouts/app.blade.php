@@ -16,29 +16,21 @@
 
     <!-- Styles -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-
 </head>
 <body class="app-layout">
     <div id="app">
         <nav class="container pt-4">
+
+            <h4 style="text-align: right">Отделы</h4>
+
             <ul class="main-nav">
-                <li>
-                    <a href="{{ route('teachers.index') }}" class="teacher-link ml-4 text-muted">
-                        Преподаватели
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ route('disciplines.index') }}" class="teacher-link ml-4 text-muted">
-                        Дисциплины
-                    </a>
-                </li>
-{{--                <li>--}}
-{{--                    <a :href="route('categories')" class="ml-4 text-muted">--}}
-{{--                        Категории--}}
-{{--                    </a>--}}
-{{--                </li>--}}
+                @foreach($departments as $department)
+                    <li>
+                        <a href="{{ route('employees.department', $department->id) }}" class="employee-link ml-4 text-muted">
+                            {{ $department->name }}
+                        </a>
+                    </li>
+                @endforeach
             </ul>
         </nav>
 
