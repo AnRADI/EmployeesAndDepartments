@@ -19,7 +19,7 @@
 						<th>Дата рождения</th>
 						<th>Отдел</th>
 						<th>Должность</th>
-						<th>xxxxxx</th>
+						<th>xxx</th>
 						<th>Оплата за месяц</th>
 					</tr>
 				</thead>
